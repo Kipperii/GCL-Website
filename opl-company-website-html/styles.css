@@ -867,19 +867,40 @@ img {
 
 /* Products Section */
 .products-section .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     gap: 30px;
-    padding: 20px 5px;
+    padding: 20px 20px; /* Increased side padding to hide cutoff */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.products-section .product-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .product-card {
+    min-width: 300px; /* Fixed width for carousel items */
+    width: 300px; /* Enforce width to ensure consistent sizing */
+    flex: 0 0 auto;   /* Don't shrink */
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border-radius: 4px;
     overflow: hidden;
     height: 100%;
+    margin-right: 0px; /* Gap handles spacing */
+}
+
+/* Adjust Carousel Container to better mask sides */
+.carousel-container {
+    position: relative;
+    padding: 0 50px;
+    max-width: 1400px; 
+    margin: 0 auto;
+    overflow: hidden; /* Mask anything protruding outside container */
 }
 
 .product-card:hover {
@@ -977,6 +998,7 @@ img {
     padding: 0 50px;
     max-width: 1400px; /* slightly wider to accommodate 5 items */
     margin: 0 auto;
+    overflow: hidden; /* Mask protruding elements */
 }
 
 /* Carousel Buttons (Base) */
@@ -1129,7 +1151,21 @@ img {
 /* Responsive */
 @media (max-width: 900px) {
     .products-section .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .products-section .product-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .products-section .product-card {
+        min-width: 280px;
+        flex: 0 0 auto;
     }
     
     .related-business-content {
@@ -1185,7 +1221,7 @@ img {
 }
 
 .env-title {
-    color: #4CAF50;
+    color: var(--primary-green);
     font-size: 2.5rem;
     margin-bottom: 30px;
     font-weight: 700;
@@ -1403,7 +1439,7 @@ img {
 
 .pqm-title {
     color: var(--primary-green);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: 0;
