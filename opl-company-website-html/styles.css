@@ -1432,3 +1432,19 @@ img {
     }
 }
 
+
+/* Hover Effects for Specific Images */
+.about-image img,
+.about-hongfai-img img,
+.env-image img,
+.pqm-iso-item img {
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover,
+.about-hongfai-img img:hover,
+.env-image img:hover,
+.pqm-iso-item img:hover {
+    transform: scale(1.05);
+}
+
