@@ -646,30 +646,70 @@ img {
 }
 .value-card {
     background: var(--white);
-    padding: 40px 30px;
+    padding: 0; /* Clear padding for inner layout */
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--primary-green);
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* More depth */
+    border: 3px solid var(--primary-green); /* Full border */
+    border-top: 3px solid var(--primary-green); /* Ensure consistent override */
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Contains the divider */
+    height: 100%;
 }
+
+.value-card-top {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    /* flex-grow removed */
+}
+
+.value-divider {
+    height: 10px;
+    background-color: var(--primary-green);
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.value-card-bottom {
+    padding: 30px;
+    text-align: center;
+    background: var(--white);
+    flex-grow: 1;
+}
+
 .value-card:hover {
     transform: translateY(-5px);
 }
+
 .value-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
 }
+
 .value-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .value-card h3 {
     color: var(--primary-green);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.value-card p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: justify;
 }
 
 /* Milestone Timeline */
@@ -750,9 +790,34 @@ img {
     border-top: 1px solid var(--border-color);
 }
 
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center; /* Center vertically */
+}
+
+.award-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.award-item img {
+    max-width: 100%;
+    max-height: 400px; /* Restrict height so they don't dominate */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.award-item img:hover {
+    transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
-    .about-intro-grid, .core-values-grid {
+    .about-intro-grid, .core-values-grid, .awards-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1280,3 +1345,88 @@ img {
     
     /* Removed redundant rules */
 }
+
+/* Certifications and Patents */
+.cert-item img:hover, .patent-container img:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    position: relative;
+}
+
+/* Precast Quality Management Section */
+.pqm-section {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.pqm-grid {
+    display: flex;
+    align-items: flex-start; /* Align top */
+    gap: 60px; /* More space between images and text */
+}
+
+.pqm-images {
+    display: flex;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.pqm-iso-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 160px; /* Adjust based on image size assumption */
+}
+
+.pqm-iso-item img {
+    width: auto;
+    max-width: 100%;
+    height: 140px; /* Force uniform height for alignment */
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.pqm-iso-item p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.pqm-content {
+    flex-grow: 1;
+    padding-top: 10px; /* Align title with top of images visually */
+}
+
+.pqm-title {
+    color: var(--primary-green);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.pqm-desc {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    .pqm-grid {
+        flex-direction: column;
+    }
+    
+    .pqm-images {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .pqm-content {
+        width: 100%;
+    }
+}
+

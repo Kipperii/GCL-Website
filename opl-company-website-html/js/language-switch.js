@@ -141,7 +141,14 @@ const translations = {
         "awards_title": "Awards & Recognition",
         "awards_desc": "Received multiple industry certifications and recognitions.",
         "about_hongfai_title": "About Orientfunds",
-        "about_hongfai_desc": "Orientfunds Precast Limited specializes in the design and production of high-quality precast concrete components, dedicated to providing stable and reliable building material solutions for various projects. With professional technology and innovative thinking, we flexibly meet the needs of different projects, offering efficient, safe, and sustainable solutions for residential buildings to infrastructure. Upholding the promise of 'Building Homes from the Heart', we not only build solid and durable architectural structures but also create a safe and comfortable living environment with exquisite craftsmanship and rigorous management, ensuring every precast component carries the warmth and trust of home."
+        "about_hongfai_desc": "Orientfunds Precast Limited specializes in the design and production of high-quality precast concrete components, dedicated to providing stable and reliable building material solutions for various projects. With professional technology and innovative thinking, we flexibly meet the needs of different projects, offering efficient, safe, and sustainable solutions for residential buildings to infrastructure. Upholding the promise of 'Building Homes from the Heart', we not only build solid and durable architectural structures but also create a safe and comfortable living environment with exquisite craftsmanship and rigorous management, ensuring every precast component carries the warmth and trust of home.",
+        "cert_patent_title": "Qualifications and Patents",
+        "iso_desc": "ISO Certification: Audited by third-party organizations to ensure the management system meets international standards.",
+        "patent_desc": "Patents: Granted by the government to protect exclusive rights to technology or design.",
+        "pqm_title": "Precast Quality Management",
+        "pqm_desc": "We ensure the quality of every precast component through a rigorous process. From raw material inspection and factory production to on-site installation, we follow international and local standards with multiple testing stages. Through intelligent equipment and precise monitoring, we ensure accurate dimensions and stable performance, providing reliable, safe, and sustainable building solutions for our partners.",
+        "iso14001_text": "ISO 14001:2015<br>Certificate No: CC 5665",
+        "iso9001_text": "ISO 9001:2015<br>Certificate No: CC 1538"
     },
     "zh": {
         "nav_home": "首頁",
@@ -162,7 +169,7 @@ const translations = {
         "footer_copyright": "Copyright © 2026鴻輝預製件有限公司．版權所有。",
         "hero_title": "同心協力，精益求精<br>以心打造理想家園",
         "index_about_title": "關於鴻輝",
-        "index_about_desc": "鴻輝預製件有限公司專注於為香港建築業提供高品質的預製混凝土構件。我們致力於通過創新技術和嚴格的質量管理，提升建築效率與安全性。憑藉多年的豐富經驗，我們已成為業界信賴的合作夥伴，參與了眾多大型住宅及基建項目。",
+        "index_about_desc": "鴻輝自1998年成立以來，專注高品質製造與跨境服務。公司於東莞沙田設立現代化廠房，依水而建，地理位置優越，天然臨近水路，為高效運輸提供獨特優勢。廠房距離香港僅百餘公里，交通網絡四通八達。水路運輸至港約需6小時，經皇崗或文錦渡口岸車程亦僅兩個多小時。憑藉此戰略區位，鴻輝能迅速連接粵港兩地，為合作夥伴提供高效可靠的跨境供應鏈支持。",
         "btn_learn_more": "了解更多 →",
         "section_projects": "工程項目",
         "section_strength": "公司實力",
@@ -285,7 +292,14 @@ const translations = {
         "awards_title": "獎項及嘉許",
         "awards_desc": "榮獲多項產業認証和嘉許",
         "about_hongfai_title": "關於鴻輝",
-        "about_hongfai_desc": "鴻輝預製件有限公司專注於高品質建築預製構件的設計與生產，致力為各類工程提供穩定可靠的建材方案。憑藉專業技術與創新思維，我們能靈活滿足不同項目的需求，從住宅樓宇到基礎設施，均提供高效、安全、可持續的解決方案。秉持「以心建家」的承諾，我們不僅打造堅固耐用的建築基構，更以細緻工藝和嚴謹管理，營造安心舒適的生活環境，讓每一件預製構件都承載著家的溫度與信任。"
+        "about_hongfai_desc": "鴻輝自1998年成立以來，專注高品質製造與跨境服務。公司於東莞沙田設立現代化廠房，依水而建，地理位置優越，天然臨近水路，為高效運輸提供獨特優勢。廠房距離香港僅百餘公里，交通網絡四通八達。水路運輸至港約需6小時，經皇崗或文錦渡口岸車程亦僅兩個多小時。憑藉此戰略區位，鴻輝能迅速連接粵港兩地，為合作夥伴提供高效可靠的跨境供應鏈支持。",
+        "cert_patent_title": "資格認證及專利",
+        "iso_desc": "ISO 認證：由第三方機構審核，確保管理體系符合國際標準。",
+        "patent_desc": "專利：由政府授權，保障技術或設計的獨占使用權。",
+        "pqm_title": "預製件質量管理",
+        "pqm_desc": "我們以嚴謹的流程確保每一件預製構件的品質。從原材料檢驗、工廠生產到現場安裝，均遵循國際及本地標準，並設有多重檢測環節。透過智能化設備與精細化監控，我們確保產品尺寸準確、性能穩定，為合作夥伴提供可靠、安全、可持續的建築解決方案。",
+        "iso14001_text": "ISO 14001:2015<br>證書編號：CC 5665",
+        "iso9001_text": "ISO 9001:2015<br>證書編號：CC 1538"
     },
 };
 
@@ -333,6 +347,20 @@ function updatePageLanguage(lang) {
                 else btn.classList.remove('active');
             }
         });
+    }
+
+    // Update ISO images in sustainability.html
+    const iso14001Img = document.getElementById('img-iso14001');
+    const iso9001Img = document.getElementById('img-iso9001');
+    
+    if (iso14001Img && iso9001Img) {
+        if (lang === 'en') {
+            iso14001Img.src = 'img/opl-website-img/iso14001_eng.png';
+            iso9001Img.src = 'img/opl-website-img/iso9001_eng.png';
+        } else {
+            iso14001Img.src = 'img/opl-website-img/iso14001_chinese.png';
+            iso9001Img.src = 'img/opl-website-img/iso9001_chinese.png';
+        }
     }
 
     // Reveal body after language update is complete
