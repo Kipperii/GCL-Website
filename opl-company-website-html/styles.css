@@ -231,12 +231,12 @@ img {
 
 .hero-content h1 {
     font-size: 3rem;
-    font-weight: 300; /* Lighter weight for "Design Templates" elegant look */
+    font-weight: 700; /* Bold weight */
     line-height: 1.3;
     /* White text with subtle shadow, or dark text depending on bg. 
        Design image shows white text with shadow. */
     color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.6); /* Enhanced shadow */
     letter-spacing: 2px;
 }
 
@@ -867,13 +867,10 @@ img {
 
 /* Products Section */
 .products-section .product-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 30px;
-    padding: 20px 20px; /* Increased side padding to hide cutoff */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    padding: 20px 0;
     width: 100%;
 }
 
@@ -882,16 +879,14 @@ img {
 }
 
 .product-card {
-    min-width: 300px; /* Fixed width for carousel items */
-    width: 300px; /* Enforce width to ensure consistent sizing */
-    flex: 0 0 auto;   /* Don't shrink */
+    width: 100%;
+    min-width: 0;    /* Reset fixed width */
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border-radius: 4px;
     overflow: hidden;
     height: 100%;
-    margin-right: 0px; /* Gap handles spacing */
 }
 
 /* Adjust Carousel Container to better mask sides */
@@ -945,6 +940,14 @@ img {
     display: none; /* Chrome/Safari */
 }
 
+/* New Grid Layout for projects page */
+.projects-section .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px 0;
+}
+
 .project-card {
     flex: 0 0 auto;
     width: 19%; /* Try to fit 5 in a row on large screens */
@@ -955,6 +958,13 @@ img {
     scroll-snap-align: start;
     border-radius: 4px;
     overflow: hidden;
+}
+
+/* When inside grid, reset width */
+.project-grid .project-card {
+    width: 100%;
+    flex: none;
+    min-width: 0;
 }
 
 .project-card:hover {
@@ -1059,7 +1069,8 @@ img {
 }
 
 @media (max-width: 600px) {
-    .products-section .product-grid {
+    .products-section .product-grid,
+    .projects-section .project-grid {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1071,17 +1082,23 @@ img {
         -ms-overflow-style: none;
     }
 
-    .products-section .product-grid::-webkit-scrollbar {
+    .products-section .product-grid::-webkit-scrollbar,
+    .projects-section .project-grid::-webkit-scrollbar {
         display: none;
     }
 
-    .products-section .product-card {
+    .products-section .product-card,
+    .projects-section .project-grid .project-card {
+        width: 100%;
         min-width: 100%;
         scroll-snap-align: center;
         border-radius: 0;
         box-shadow: none;
         flex-shrink: 0;
+        margin-right: 0;
+        flex: 0 0 100%;
     }
+
     
     .carousel-container {
         padding: 0; /* Remove padding for edge-to-edge look */
@@ -1483,4 +1500,25 @@ img {
 .pqm-iso-item img:hover {
     transform: scale(1.05);
 }
+
+/* 
+   Mobile Carousel Logic for Business Page 
+   Hide buttons on desktop, show only on mobile.
+   Remove generic carousel padding on desktop for these specific grids.
+*/
+@media (min-width: 601px) {
+    .products-section .carousel-btn,
+    .projects-section .carousel-btn {
+        display: none !important;
+    }
+
+    .products-section .carousel-container,
+    .projects-section .carousel-container {
+        padding: 0 !important;
+        max-width: none !important;
+        overflow: visible !important;
+        margin: 0 !important;
+    }
+}
+
 

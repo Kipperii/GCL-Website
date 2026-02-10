@@ -17,7 +17,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Orientfunds Precast Ltd. Logo">
+                <img src="img/OPL%20logo%20with%20company%20name.png" alt="Orientfunds Precast Ltd. Logo">
             </a>
             
             <div class="header-right">
@@ -26,6 +26,8 @@
                         <button class="lang-btn" onclick="switchToEnglish()">EN</button>
                         <span>|</span>
                         <button class="lang-btn active" onclick="switchToChinese()">繁</button>
+                        <span>|</span>
+                        <button class="lang-btn" onclick="switchToSimplified()">简</button>
                     </div>
                 </div>
                 
@@ -63,7 +65,7 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-             <h1 data-i18n="hero_title">同心協力，精益求精<br>以心打造理想家園</h1>
+             <h1 data-i18n="hero_title">克服困難，開拓新路</h1>
         </div>
     </section>
 
@@ -167,10 +169,9 @@
             <h2 class="section-title" data-i18n="eng_projects">工程項目</h2>
             
             <div class="carousel-container">
-                <button class="carousel-btn prev" aria-label="Previous">❮</button>
-                <div class="project-carousel carousel-track">
-                    <!-- 1. Kai Tak Cullinan Harbour -->
-                    <div class="project-card">
+            <button class="carousel-btn prev" aria-label="Previous">❮</button>
+            <div class="project-grid carousel-track">
+                <div class="project-card">
                         <div class="card-image">
                             <img src="img/opl-website-img/工程項目 啟德 天璽海.png" alt="啟德 天璽 • 海">
                         </div>
@@ -290,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next">❯</button>
+            <button class="carousel-btn next" aria-label="Next">❯</button>
             </div>
         </div>
     </section>
@@ -302,7 +303,6 @@
             
             <!-- ISO Certificates -->
             <div class="carousel-container cert-carousel" style="position: relative; padding: 0 50px; max-width: 1200px; margin: 0 auto;">
-                <button class="carousel-btn prev" aria-label="Previous">❮</button>
                 <div class="carousel-track" style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;">
                     <div class="cert-item" style="flex: 0 0 calc(33.333% - 14px); min-width: 250px; scroll-snap-align: start; text-align: center;">
                          <img src="img/quality-management/quality-certification/img_quality_photo01.jpg" alt="ISO Cert 1" style="max-width: 85%; width: auto; height: auto; border: 1px solid #eee; transition: transform 0.3s ease; margin: 0 auto; display: inline-block;">
@@ -314,7 +314,6 @@
                          <img src="img/quality-management/quality-certification/img_quality_photo03.jpg" alt="ISO Cert 3" style="max-width: 85%; width: auto; height: auto; border: 1px solid #eee; transition: transform 0.3s ease; margin: 0 auto; display: inline-block;">
                     </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next">❯</button>
             </div>
             <p data-i18n="iso_desc" style="text-align: center; margin-top: 20px; color: #666; font-size: 1rem;">ISO 認證：由第三方機構審核，確保管理體系符合國際標準。</p>
 
@@ -399,7 +398,8 @@
                 const itemWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 300;
                 // If it's flex gap (Projects), add gap. If it's full width (Products mobile), width is enough.
                 const gap = 30; // Assuming 30px gap usually, or 0.
-                const scrollAmount = (track.classList.contains('product-grid') && window.innerWidth <= 600) ? track.clientWidth : (itemWidth + gap);
+                const isMobileGrid = (track.classList.contains('product-grid') || track.classList.contains('project-grid')) && window.innerWidth <= 600;
+                const scrollAmount = isMobileGrid ? track.clientWidth : (itemWidth + gap);
                 
                 track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             });
@@ -407,7 +407,8 @@
             prevBtn.addEventListener('click', () => {
                 const itemWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 300;
                 const gap = 30;
-                const scrollAmount = (track.classList.contains('product-grid') && window.innerWidth <= 600) ? track.clientWidth : (itemWidth + gap);
+                const isMobileGrid = (track.classList.contains('product-grid') || track.classList.contains('project-grid')) && window.innerWidth <= 600;
+                const scrollAmount = isMobileGrid ? track.clientWidth : (itemWidth + gap);
                 
                 track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
