@@ -7,8 +7,9 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script>
-        if (localStorage.getItem('site_lang') === 'en') {
-            document.documentElement.classList.add('lang-en-pending');
+        var savedLang = localStorage.getItem('site_lang');
+        if (savedLang === 'en' || savedLang === 'cn') {
+            document.documentElement.classList.add('lang-update-pending');
         }
     </script>
 </head>
@@ -149,16 +150,26 @@
     <section id="awards" class="awards-section" style="padding: 80px 0; background-color: #f9f9f9;">
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <h2 class="section-title" data-i18n="awards_title" style="color: var(--primary-green); font-size: 2.5rem; margin-bottom: 60px; text-align: center; font-weight: 700;">獎項及嘉許</h2>
-            <div class="awards-grid">
-                <div class="award-item">
-                     <img src="img/opl-website-img/cert1.png" alt="Certificate of Membership">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                <div class="carousel-track" style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; align-items: center;">
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/opl-website-img/獎項及嘉許1.jpg" alt="Award 1">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/opl-website-img/獎項及嘉許2.jpg" alt="Award 2">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/opl-website-img/獎項及嘉許3.png" alt="Award 3">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/opl-website-img/獎項及嘉許4.png" alt="Award 4">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/opl-website-img/獎項及嘉許5.png" alt="Award 5">
+                    </div>
                 </div>
-                <div class="award-item">
-                     <img src="img/opl-website-img/cert2.png" alt="Certificate of Appreciation">
-                </div>
-                <div class="award-item">
-                     <img src="img/opl-website-img/cert3.png" alt="Diamond Sponsor 2025">
-                </div>
+                <button class="carousel-btn next" aria-label="Next">❯</button>
             </div>
         </div>
     </section>
@@ -225,6 +236,27 @@
         
         menuToggle.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
+        });
+
+        // Simple Carousel Script
+        document.querySelectorAll('.carousel-container').forEach(container => {
+            const track = container.querySelector('.carousel-track');
+            const prevBtn = container.querySelector('.prev');
+            const nextBtn = container.querySelector('.next');
+            
+            if (!track || !prevBtn || !nextBtn) return;
+
+            nextBtn.addEventListener('click', () => {
+                const itemWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 300;
+                const gap = 20; 
+                track.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const itemWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 300;
+                const gap = 20;
+                track.scrollBy({ left: -(itemWidth + gap), behavior: 'smooth' });
+            });
         });
     </script>
 </body>

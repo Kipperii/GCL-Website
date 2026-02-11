@@ -602,4 +602,5 @@ function updatePageLanguage(lang) {
 
     // Reveal body after language update is complete
     document.documentElement.classList.remove('lang-en-pending');
+    document.documentElement.classList.remove('lang-update-pending');
 }

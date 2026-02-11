@@ -25,8 +25,9 @@ body {
     padding-top: 80px; /* Space for fixed header */
 }
 
-/* Prevent flash of Chinese content when English is selected */
-html.lang-en-pending body {
+/* Prevent flash of content when non-default language is selected */
+html.lang-en-pending body,
+html.lang-update-pending body {
     visibility: hidden;
 }
 
@@ -1503,17 +1504,15 @@ img {
 
 /* 
    Mobile Carousel Logic for Business Page 
-   Hide buttons on desktop, show only on mobile.
+   Hide buttons on desktop (using .mobile-only-carousel class), show only on mobile.
    Remove generic carousel padding on desktop for these specific grids.
 */
 @media (min-width: 601px) {
-    .products-section .carousel-btn,
-    .projects-section .carousel-btn {
+    .mobile-only-carousel .carousel-btn {
         display: none !important;
     }
 
-    .products-section .carousel-container,
-    .projects-section .carousel-container {
+    .mobile-only-carousel.carousel-container {
         padding: 0 !important;
         max-width: none !important;
         overflow: visible !important;

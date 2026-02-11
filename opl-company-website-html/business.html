@@ -7,8 +7,9 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script>
-        if (localStorage.getItem('site_lang') === 'en') {
-            document.documentElement.classList.add('lang-en-pending');
+        var savedLang = localStorage.getItem('site_lang');
+        if (savedLang === 'en' || savedLang === 'cn') {
+            document.documentElement.classList.add('lang-update-pending');
         }
     </script>
 </head>
@@ -81,7 +82,7 @@
         <div class="container">
             <h2 class="section-title" data-i18n="business_products_title">產品</h2>
             
-            <div class="carousel-container">
+            <div class="carousel-container mobile-only-carousel">
                 <button class="carousel-btn prev" aria-label="Previous">❮</button>
                 <div class="product-grid carousel-track">
                     <div class="product-card">
@@ -168,7 +169,7 @@
         <div class="container">
             <h2 class="section-title" data-i18n="eng_projects">工程項目</h2>
             
-            <div class="carousel-container">
+            <div class="carousel-container mobile-only-carousel">
             <button class="carousel-btn prev" aria-label="Previous">❮</button>
             <div class="project-grid carousel-track">
                 <div class="project-card">
