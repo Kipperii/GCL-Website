@@ -1562,6 +1562,8 @@ img {
     display: flex;
     flex-direction: column;
     border-left: 2px solid rgba(255,255,255,0.2);
+    width: 180px; /* Fixed width to prevent vibration/jumping */
+    flex-shrink: 0;
 }
 
 .milestone-year-item {
@@ -1571,7 +1573,7 @@ img {
     padding: 15px 30px;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; REMOVED VIBRATION */
     font-family: 'Segoe UI', sans-serif; /* Clean font for numbers */
 }
 
@@ -1584,7 +1586,7 @@ img {
     width: 4px;
     background-color: #4CAF50;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.3s ease; REMOVED VIBRATION */
 }
 
 .milestone-year-item:hover {
@@ -1607,6 +1609,22 @@ img {
 .milestone-content-area {
     flex: 1;
     padding-top: 10px;
+    padding-left: 180px; /* Increased padding to move text right */
+}
+
+.milestone-display-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.milestone-green-square {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-green);
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .milestone-display-year {
@@ -1614,7 +1632,7 @@ img {
     font-weight: 800;
     color: #4CAF50; /* Keep green or make white with shadow like reference? Ref allows white with heavy shadow */
     text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Strong shadow */
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Updated to 0 to align with square */
     line-height: 1;
     display: none; /* Hide if duplicated in sidebar, but can be nice to show again */
 }
@@ -1632,25 +1650,68 @@ img {
     line-height: 1.6;
     color: #ffffff;
     max-width: 700px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Stronger shadow for bright bg */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    /* Align with the Year text (Square 32px + Gap 15px = 47px) */
+    margin-left: 47px; 
+}
+
+
+/* Aligned Heading Logic */
+.milestone-heading {
+    color: white; 
+    font-size: 2.5rem; 
+    margin-bottom: 40px; 
+    font-weight: 700;
+    /* 
+       Calculation for alignment with content:
+       Timeline Width (180px) + Wrapper Gap (80px) + Content Padding (180px) = 440px 
+    */
+    margin-left: 440px;
+    text-align: left;
+}
+
+/* Unified Mobile Responsive Styles */
+@media (max-width: 991px) { /* Tablet and smaller desktop */
+    .milestone-heading {
+        margin-left: 100px; /* Reduce margin on tablet */
+    }
+    .milestone-content-area {
+        padding-left: 50px; /* Reduce padding on tablet */
+    }
 }
 
 @media (max-width: 768px) {
+    .milestone-section {
+        min-height: auto;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+
     .milestone-wrapper {
         flex-direction: column;
         gap: 30px;
+        margin-top: 20px;
     }
     
+    .milestone-heading {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
     .milestone-timeline {
         flex-direction: row;
         border-left: none;
         border-bottom: 2px solid rgba(255,255,255,0.2);
         width: 100%;
         overflow-x: auto;
-        padding-bottom: 0;
+        padding-bottom: 10px;
         white-space: nowrap;
+        margin-bottom: 20px;
         /* Hide scrollbar */
         scrollbar-width: none; 
+        -ms-overflow-style: none;
     }
     .milestone-timeline::-webkit-scrollbar {
         display: none;
@@ -1658,6 +1719,12 @@ img {
 
     .milestone-year-item {
         padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    .milestone-year-item.active {
+        font-size: 1.4rem;
+        padding: 10px 20px; /* Constant padding to avoid jumpiness */
     }
     
     .milestone-year-item::before {
@@ -1668,12 +1735,28 @@ img {
         bottom: -2px;
     }
 
+    .milestone-content-area {
+        padding-left: 20px; /* Small padding for mobile */
+        padding-right: 20px;
+    }
+
+    .milestone-display-header {
+        justify-content: flex-start; /* Keep left align or center? Left seems better for reading */
+        margin-bottom: 20px;
+    }
+
     .milestone-display-year {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .milestone-green-square {
+        width: 24px;
+        height: 24px;
     }
     
     .milestone-description {
         font-size: 1.1rem;
+        margin-left: 39px; /* 24px square + 15px gap */
     }
 }
 
