@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+﻿/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -1520,4 +1520,160 @@ img {
     }
 }
 
+
+
+/* Milestone Interactive Section */
+.milestone-section {
+    position: relative;
+    background-image: url('img/opl-website-img/%E9%87%8C%E7%A8%8B%E7%A2%91.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    align-items: center; /* Vertical center */
+}
+
+.milestone-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient from dark (for text) to transparent/white (for brightness) */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.9) 100%);
+    z-index: 1;
+}
+
+.milestone-section .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.milestone-wrapper {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.milestone-timeline {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgba(255,255,255,0.2);
+}
+
+.milestone-year-item {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', sans-serif; /* Clean font for numbers */
+}
+
+.milestone-year-item::before {
+    content: '';
+    position: absolute;
+    left: -2px; /* Overlap border */
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #4CAF50;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.milestone-year-item:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+.milestone-year-item.active {
+    color: #ffffff;
+    font-size: 2.2rem; /* Larger active year */
+    line-height: 1.2;
+    background-color: var(--primary-green); /* Green box active state */
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.milestone-year-item.active::before {
+    opacity: 0; /* Remove the side line when box is active */
+}
+
+.milestone-content-area {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.milestone-display-year {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #4CAF50; /* Keep green or make white with shadow like reference? Ref allows white with heavy shadow */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Strong shadow */
+    margin-bottom: 20px;
+    line-height: 1;
+    display: none; /* Hide if duplicated in sidebar, but can be nice to show again */
+}
+
+/* We design it so year is highlighted on left, text on right. */
+/* But users prompt image suggests a specific design involving text display. */
+/* I will keep the big year in the content area as well for emphasis. */
+.milestone-display-year {
+    display: block; 
+    color: #ffffff; /* Override to white based on the reference image 'bright' content */
+}
+
+.milestone-description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 700px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Stronger shadow for bright bg */
+}
+
+@media (max-width: 768px) {
+    .milestone-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .milestone-timeline {
+        flex-direction: row;
+        border-left: none;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0;
+        white-space: nowrap;
+        /* Hide scrollbar */
+        scrollbar-width: none; 
+    }
+    .milestone-timeline::-webkit-scrollbar {
+        display: none;
+    }
+
+    .milestone-year-item {
+        padding: 10px 20px;
+    }
+    
+    .milestone-year-item::before {
+        width: 100%;
+        height: 4px;
+        left: 0;
+        top: auto;
+        bottom: -2px;
+    }
+
+    .milestone-display-year {
+        font-size: 2.5rem;
+    }
+    
+    .milestone-description {
+        font-size: 1.1rem;
+    }
+}
 
