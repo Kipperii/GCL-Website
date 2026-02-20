@@ -237,7 +237,7 @@ img {
     /* White text with subtle shadow, or dark text depending on bg. 
        Design image shows white text with shadow. */
     color: #fff;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.6); /* Enhanced shadow */
+    text-shadow: 0 4px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7); /* Enhanced stronger shadow */
     letter-spacing: 2px;
 }
 
