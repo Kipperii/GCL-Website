@@ -1360,9 +1360,9 @@ img {
 /* About Hongfai Section */
 .about-hongfai-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px 80px;
-    align-items: start;
+    grid-template-columns: 1.25fr 1.75fr;
+    gap: 40px 60px;
+    align-items: center;
 }
 
 .about-hongfai-img {
@@ -1432,15 +1432,15 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 160px; /* Adjust based on image size assumption */
+    width: 280px; /* Increased width to match reference */
 }
 
 .pqm-iso-item img {
-    width: auto;
-    max-width: 100%;
-    height: 140px; /* Force uniform height for alignment */
+    width: 100%;
+    height: auto; /* Allow natural aspect ratio */
+    max-height: 250px; /* reasonable max height */
     object-fit: contain;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .pqm-iso-item p {
@@ -1562,12 +1562,12 @@ img {
     display: flex;
     flex-direction: column;
     border-left: 2px solid rgba(255,255,255,0.2);
-    width: 180px; /* Fixed width to prevent vibration/jumping */
+    width: 220px; /* Fixed width to prevent vibration/jumping */
     flex-shrink: 0;
 }
 
 .milestone-year-item {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: rgba(255,255,255,0.4);
     padding: 15px 30px;
@@ -1595,9 +1595,7 @@ img {
 
 .milestone-year-item.active {
     color: #ffffff;
-    font-size: 2.2rem; /* Larger active year */
-    line-height: 1.2;
-    background-color: var(--primary-green); /* Green box active state */
+    font-size: 2.5rem; /* Larger active year */
     padding-left: 20px; 
     padding-right: 20px;
 }
@@ -1609,7 +1607,7 @@ img {
 .milestone-content-area {
     flex: 1;
     padding-top: 10px;
-    padding-left: 180px; /* Increased padding to move text right */
+    padding-left: 140px; /* Increased padding to move text right */
 }
 
 .milestone-display-header {
@@ -1760,3 +1758,118 @@ img {
     }
 }
 
+  /* Sister Company Section */
+  .sister-company-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: center;
+  }
+  
+  .sister-logo {
+      text-align: center;
+  }
+  
+  .sister-content {
+      /* Just alignment */
+  }
+
+  .sister-link:hover {
+      color: var(--primary-green) !important;
+      text-decoration: underline !important;
+  }
+
+  @media (max-width: 900px) {
+      .sister-company-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+      }
+      .sister-logo img {
+            max-width: 300px !important;
+      }
+      .sister-title {
+          text-align: center;
+      }
+  }
+
+  /* Three-Inspection System */
+.inspection-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.inspection-text-col {
+    text-align: left;
+}
+
+.inspection-title {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.inspection-desc {
+    color: var(--text-dark);
+    line-height: 2;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.inspection-steps-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start; /* Align entire column to the left of its grid area if needed, or center */
+    padding-left: 20px;
+}
+
+.inspection-step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.inspection-icon {
+    width: 60px; /* Adjust based on your icon size preference */
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.inspection-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Drop shadow to match the 3D look */
+    /* filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)); */
+}
+
+.inspection-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+@media (max-width: 900px) {
+    .inspection-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .inspection-desc {
+        margin-bottom: 40px;
+    }
+
+    .inspection-steps-col {
+        align-items: center; /* Center steps on mobile */
+        padding-left: 0;
+    }
+    
+    .inspection-step-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
