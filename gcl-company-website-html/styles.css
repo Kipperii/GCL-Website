@@ -1690,22 +1690,7 @@ html[lang="en"] .product-panel:not(.active) .product-panel-header h3 {
 
 
 /* About Hongfai Section */
-.about-hongfai-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 1.75fr;
-    gap: 40px 60px;
-    align-items: center;
-}
-
-.about-hongfai-img {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    align-self: center;
-}
-
 .about-hongfai-title {
-    grid-column: 2;
-    grid-row: 1;
     color: var(--primary-green);
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -1713,8 +1698,6 @@ html[lang="en"] .product-panel:not(.active) .product-panel-header h3 {
 }
 
 .about-hongfai-desc {
-    grid-column: 2;
-    grid-row: 2;
     line-height: 2;
     color: var(--text-dark);
     font-size: 1rem;
@@ -1722,16 +1705,7 @@ html[lang="en"] .product-panel:not(.active) .product-panel-header h3 {
 }
 
 @media (max-width: 900px) {
-    .about-hongfai-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .about-hongfai-title { order: 1; margin-bottom: 0px; text-align: center; } /* Add center for mobile title? Original wasn't centered but typically yes. Let's keep existing style or default. Actually h2 had inline styles but no text-align. */
-    .about-hongfai-img { order: 2; margin: 0 auto 30px auto; max-width: 250px; }
-    .about-hongfai-desc { order: 3; }
-    
-    /* Removed redundant rules */
+    .about-hongfai-title { text-align: center; }
 }
 
 /* Certifications and Patents */
@@ -1909,14 +1883,12 @@ html[lang="en"] .product-panel:not(.active) .product-panel-header h3 {
 
 /* Hover Effects for Specific Images */
 .about-image img,
-.about-hongfai-img img,
 .env-image img,
 .pqm-iso-item img {
     transition: transform 0.3s ease;
 }
 
 .about-image img:hover,
-.about-hongfai-img img:hover,
 .env-image img:hover,
 .pqm-iso-item img:hover {
     transform: scale(1.05);
