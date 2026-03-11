@@ -18,7 +18,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="img/OPL%20logo%20with%20company%20name.png" alt="Orientfunds Precast Ltd. Logo">
+                <img src="img/gloriouslogo.png" alt="Glorious Concrete (H.K.) Ltd. Logo">
             </a>
             
             <div class="header-right">
@@ -62,7 +62,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('img/opl-website-img/Top%20Pic%20%E5%85%AC%E5%8F%B8%E6%A5%AD%E5%8B%99.jpg');">
+    <section class="hero" style="background-image: url('img/gcl-website-img/主頁  公司業務.jpg');">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -77,231 +77,251 @@
     </div>
 
     <!-- Products Section -->
-    <section id="products" class="products-section" style="padding: 60px 0;">
+    <section id="products" class="products-section section-divider" style="padding: 80px 0; background-color: #f9f9f9;">
         <div class="container">
             <h2 class="section-title" data-i18n="business_products_title">產品</h2>
             
-            <div class="carousel-container mobile-only-carousel">
-                <button class="carousel-btn prev" aria-label="Previous">❮</button>
-                <div class="product-grid carousel-track">
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品4.png" alt="鋼結構組裝合成建築法">
-                        </div>
-                        <h3 data-i18n="prod_steel_mic">鋼結構組裝合成建築法</h3>
+            <div class="products-expandable">
+                <!-- Product 1: Pre-mixed Mortar (Active by default) -->
+                <div class="product-panel active" data-product="mortar1">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_mortar1" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預拌砂漿產品</h3>
+                        <span class="panel-icon">+</span>
                     </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品5.png" alt="全混凝土組裝合成建築法">
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預拌混凝土產品.jpg" alt="預拌砂漿產品">
                         </div>
-                        <h3 data-i18n="prod_conc_mic">全混凝土組裝合成建築法</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/輕質混凝土間牆板.png" alt="輕質混凝土間牆板">
-                        </div>
-                        <h3 data-i18n="prod_wall_panel">輕質混凝土間牆板</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品7.png" alt="外牆">
-                        </div>
-                        <h3 data-i18n="prod_ext_wall">外牆</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品8.png" alt="樓梯">
-                        </div>
-                        <h3 data-i18n="prod_stair">樓梯</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品9.png" alt="露台">
-                        </div>
-                        <h3 data-i18n="prod_balcony">露台</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/垃圾槽.png" alt="垃圾槽">
-                        </div>
-                        <h3 data-i18n="prod_chute">垃圾槽</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/半樓板.png" alt="半樓板">
-                        </div>
-                        <h3 data-i18n="prod_semi_slab">半樓板</h3>
-                    </div>
-                    <div class="product-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/公司業務 產品12.png" alt="混凝土板">
-                        </div>
-                        <h3 data-i18n="prod_conc_slab">混凝土板</h3>
+
                     </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next">❯</button>
+
+                <!-- Product 2: Pre-mixed Mortar (Collapsed) -->
+                <div class="product-panel" data-product="mortar2">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_mortar2" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預拌砂漿產品</h3>
+                        <span class="panel-icon">+</span>
+                    </div>
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預拌砂漿產品.png" alt="預拌砂漿產品">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Pre-packaged Gypsum-based (Collapsed) -->
+                <div class="product-panel" data-product="gypsum">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_gypsum" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預包裝石膏基產品</h3>
+                        <span class="panel-icon">+</span>
+                    </div>
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預包裝石膏基產品.jpg" alt="預包裝石膏基產品">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Description Area -->
+            <div class="product-description-container" style="margin-top: 16px;">
+                <!-- Description for Product 1 -->
+                <div class="product-description-content active" data-description="mortar1">
+                    <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);">
+                        <h3 data-i18n="biz_mortar1_title" style="color: var(--primary-green); font-size: 1.8rem; margin-bottom: 25px; font-weight: 700;">預拌混凝土產品</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                            <div>
+                                <h4 data-i18n="biz_mortar1_col1_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">產品名稱</h4>
+                                <p data-i18n="biz_mortar1_item1" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">普通混凝土混合物：(55 MPa及以下)</p>
+                                <p data-i18n="biz_mortar1_item2" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">高強度鋼筋混凝土：(60 MPa及以上)</p>
+                                <h4 data-i18n="biz_mortar1_col1_subtitle" style="color: var(--primary-green-dark); font-size: 1.2rem; margin: 20px 0 15px; font-weight: 600;">防火混凝土</h4>
+                                <p data-i18n="biz_mortar1_item3" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">輕骨料：(密度小於1,350 kg/m³)</p>
+                                <p data-i18n="biz_mortar1_item4" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">輕骨料混凝土：(4小時達12 MPa)</p>
+                            </div>
+                            <div>
+                                <h4 data-i18n="biz_mortar1_col2_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">特種混凝土</h4>
+                                <p data-i18n="biz_mortar1_item5" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">纖維混凝土：(纖維含量約1650 kg/m³ - 1850 kg/m³) (耐火等級: HK30112893)</p>
+                                <p data-i18n="biz_mortar1_item6" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">低密度鋼筋混凝土：(密度為1850 kg/m³並具4小時耐火特性) (耐火等級: HK30127477)</p>
+                                <p data-i18n="biz_mortar1_item7" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">低密度混凝土：(密度為100 MPa)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description for Product 2 -->
+                <div class="product-description-content" data-description="mortar2">
+                    <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);">
+                        <h3 data-i18n="biz_mortar2_title" style="color: var(--primary-green); font-size: 1.8rem; margin-bottom: 25px; font-weight: 700;">預拌砂漿產品</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                            <div>
+                                <h4 data-i18n="biz_mortar2_col1_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">產品規格</h4>
+                                <p data-i18n="biz_mortar2_item1" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">抹灰砂漿：適用於內外牆抹灰，具有良好的施工性能</p>
+                                <p data-i18n="biz_mortar2_item2" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">砌築砂漿：用於砌磚、砌塊等砌體工程</p>
+                                <p data-i18n="biz_mortar2_item3" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">地坪砂漿：適用於地面找平和修補</p>
+                            </div>
+                            <div>
+                                <h4 data-i18n="biz_mortar2_col2_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">產品特點</h4>
+                                <p data-i18n="biz_mortar2_item4" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 配比精確，質量穩定</p>
+                                <p data-i18n="biz_mortar2_item5" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 施工便捷，節省人工</p>
+                                <p data-i18n="biz_mortar2_item6" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 綠色環保，減少粉塵</p>
+                                <p data-i18n="biz_mortar2_item7" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 強度可靠，耐久性強</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description for Product 3 -->
+                <div class="product-description-content" data-description="gypsum">
+                    <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);">
+                        <h3 data-i18n="biz_gypsum_title" style="color: var(--primary-green); font-size: 1.8rem; margin-bottom: 25px; font-weight: 700;">預包裝石膏基產品</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                            <div>
+                                <h4 data-i18n="biz_gypsum_col1_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">產品系列</h4>
+                                <p data-i18n="biz_gypsum_item1" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">石膏基抹灰砂漿：用於室內牆面抹灰</p>
+                                <p data-i18n="biz_gypsum_item2" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">石膏基自流平：適用於地面快速找平</p>
+                                <p data-i18n="biz_gypsum_item3" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">石膏基修補砂漿：用於牆面修補和修整</p>
+                            </div>
+                            <div>
+                                <h4 data-i18n="biz_gypsum_col2_title" style="color: var(--primary-green-dark); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600;">產品優勢</h4>
+                                <p data-i18n="biz_gypsum_item4" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 施工速度快，縮短工期</p>
+                                <p data-i18n="biz_gypsum_item5" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 表面光滑，減少後期處理</p>
+                                <p data-i18n="biz_gypsum_item6" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 環保無害，室內安全</p>
+                                <p data-i18n="biz_gypsum_item7" style="margin: 8px 0; color: var(--text-light); line-height: 1.8;">✓ 調節濕度，改善環境</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Engineering Projects Section -->
-    <section id="projects" class="projects-section" style="padding: 60px 0; background-color: #f9f9f9;">
+    <section id="projects" class="projects-section section-divider" style="padding: 80px 0; background-color: #f9f9f9;">
         <div class="container">
-            <h2 class="section-title" data-i18n="completed_projects">已完成工程項目</h2>
-            
-            <div class="carousel-container mobile-only-carousel">
-            <button class="carousel-btn prev" aria-label="Previous">❮</button>
-            <div class="project-grid carousel-track">
-                <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 啟德 天璽海.png" alt="啟德 天璽 • 海">
+            <h2 class="section-title" data-i18n="completed_projects" style="margin-bottom: 60px;">已完成工程項目</h2>
+
+            <div class="projects-carousel-container" style="position: relative; max-width: 1600px; margin: 0 auto; padding: 0 80px;">
+                <button class="projects-carousel-btn projects-prev" aria-label="Previous" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(76, 175, 80, 0.9); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.25);" onmouseover="this.style.background='#4CAF50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.9)'">❮</button>
+
+                <div class="projects-carousel-wrapper" style="overflow: hidden; padding: 20px 0;">
+                    <div class="project-grid projects-carousel-track" style="display: flex; gap: 12px; transition: transform 0.5s ease-in-out;">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20匯璽.jpg" alt="啟德 天璽 • 海"></div>
+                            <div class="card-content"><h3 data-i18n="proj_keitak">啟德</h3><p data-i18n="proj_cullinan_harbour">天璽 • 海</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_keitak">啟德</h3>
-                            <p data-i18n="proj_cullinan_harbour">天璽 • 海</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20Grand%20YOHO.jpg" alt="天水圍 Yoho West"></div>
+                            <div class="card-content"><h3 data-i18n="proj_tinshuiwai">天水圍</h3><p data-i18n="proj_yoho_west">Yoho West</p></div>
                         </div>
-                    </div>
-                    <!-- 2. Tin Shui Wai Yoho West -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 Yoho West.png" alt="天水圍 Yoho West">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20雲匯.jpg" alt="西沙 Sierra Sea"></div>
+                            <div class="card-content"><h3 data-i18n="proj_saisha">西沙</h3><p data-i18n="proj_sierra_sea">Sierra Sea</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tinshuiwai">天水圍</h3>
-                            <p data-i18n="proj_yoho_west">Yoho West</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20海璇.jpg" alt="啟德 天璽 • 天"></div>
+                            <div class="card-content"><h3 data-i18n="proj_keitak">啟德</h3><p data-i18n="proj_cullinan_sky">天璽 • 天</p></div>
                         </div>
-                    </div>
-                    <!-- 3. Sai Sha Sierra Sea -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 Sierra Sea.png" alt="西沙 Sierra Sea">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20晉海.jpg" alt="屯門 NOVOLAND"></div>
+                            <div class="card-content"><h3 data-i18n="proj_tuenmun">屯門</h3><p data-i18n="proj_novoland">NOVOLAND</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_saisha">西沙</h3>
-                            <p data-i18n="proj_sierra_sea">Sierra Sea</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20天鑄.jpg" alt="荃灣 沙咀道1號"></div>
+                            <div class="card-content"><h3 data-i18n="proj_tsuenwan">荃灣</h3><p data-i18n="proj_1_sha_tsui_rd">沙咀道1號</p></div>
                         </div>
-                    </div>
-                    <!-- 4. Kai Tak Cullinan Sky -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 啟德 天璽天.png" alt="啟德 天璽 • 天">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20本舍.jpg" alt="白石角 University Hill"></div>
+                            <div class="card-content"><h3 data-i18n="proj_pakshekkok">白石角</h3><p data-i18n="proj_university_hill">University Hill</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_keitak">啟德</h3>
-                            <p data-i18n="proj_cullinan_sky">天璽 • 天</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20The%20YOHO%20Hub.jpg" alt="元朗 The YOHO Hub 2期"></div>
+                            <div class="card-content"><h3 data-i18n="proj_yuenlong">元朗</h3><p data-i18n="proj_yoho_hub_2">The YOHO Hub 2期</p></div>
                         </div>
-                    </div>
-                    <!-- 5. Tuen Mun NOVOLAND -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 NOVOLAND.png" alt="屯門 NOVOLAND">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20The%20Millennity.jpeg" alt="沙田 瓏珀山"></div>
+                            <div class="card-content"><h3 data-i18n="proj_shatin">沙田</h3><p data-i18n="proj_shatin_name">瓏珀山</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tuenmun">屯門</h3>
-                            <p data-i18n="proj_novoland">NOVOLAND</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20The%20Millennity%20%282%29.jpeg" alt="大角咀 傲寓"></div>
+                            <div class="card-content"><h3 data-i18n="proj_taikoktsui">大角咀</h3><p data-i18n="proj_taikoktsui_name">傲寓</p></div>
                         </div>
-                    </div>
-                    <!-- 6. Tsuen Wan 1 Sha Tsui Road -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 沙咀道1號.png" alt="荃灣 沙咀道1號">
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20環球貿易廣場.jpg" alt="青衣 明翹匯"></div>
+                            <div class="card-content"><h3 data-i18n="proj_tsingyi">青衣</h3><p data-i18n="proj_tsingyi_name">明翹匯</p></div>
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tsuenwan">荃灣</h3>
-                            <p data-i18n="proj_1_sha_tsui_rd">沙咀道1號</p>
-                        </div>
-                    </div>
-                    <!-- 7. Pak Shek Kok University Hill -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 University Hill.png" alt="白石角 University Hill">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_pakshekkok">白石角</h3>
-                            <p data-i18n="proj_university_hill">University Hill</p>
-                        </div>
-                    </div>
-                    <!-- 8. Yuen Long The YOHO Hub Phase 2 -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 The yoho hub 2期.png" alt="元朗 The YOHO Hub 2期">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_yuenlong">元朗</h3>
-                            <p data-i18n="proj_yoho_hub_2">The YOHO Hub 2期</p>
-                        </div>
-                    </div>
-                    <!-- 9. Shatin St Michel -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 瓏珀山.png" alt="沙田 瓏珀山">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_shatin">沙田</h3>
-                            <p data-i18n="proj_shatin_name">瓏珀山</p>
-                        </div>
-                    </div>
-                    <!-- 10. Tai Kok Tsui Sablier -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 傲寓.png" alt="大角咀 傲寓">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_taikoktsui">大角咀</h3>
-                            <p data-i18n="proj_taikoktsui_name">傲寓</p>
-                        </div>
-                    </div>
-                    <!-- 11. Tsing Yi The Grand Marine -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 明翹匯.png" alt="青衣 明翹匯">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tsingyi">青衣</h3>
-                            <p data-i18n="proj_tsingyi_name">明翹匯</p>
-                        </div>
-                    </div>
-                    <!-- 12. Island South La Marina -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 揚海.png" alt="港島南 揚海">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_southisland">港島南</h3>
-                            <p data-i18n="proj_southisland_name">揚海</p>
+                        <div class="project-card" style="flex: 0 0 calc((100% - 48px) / 5); transition: transform 0.3s ease;">
+                            <div class="card-image"><img src="img/gcl-website-img/已完成工程項目%20-%20Grand%20YOHO.jpg" alt="港島南 揚海"></div>
+                            <div class="card-content"><h3 data-i18n="proj_southisland">港島南</h3><p data-i18n="proj_southisland_name">揚海</p></div>
                         </div>
                     </div>
                 </div>
-            <button class="carousel-btn next" aria-label="Next">❯</button>
+
+                <button class="projects-carousel-btn projects-next" aria-label="Next" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(76, 175, 80, 0.9); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; z-index: 10; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.25);" onmouseover="this.style.background='#4CAF50'" onmouseout="this.style.background='rgba(76, 175, 80, 0.9)'">❯</button>
             </div>
         </div>
     </section>
 
     <!-- Certifications and Patents Section -->
-    <section id="certifications" class="certifications-section" style="padding: 80px 0; background-color: #fff;">
+    <section id="certifications" class="certifications-section section-divider" style="padding: 80px 0; background-color: #fff;">
         <div class="container">
             <h2 class="section-title" data-i18n="cert_patent_title" style="color: #4CAF50; font-size: 2.5rem; margin-bottom: 40px; font-weight: 700;">資格認證及專利</h2>
             
-            <!-- ISO Certificates -->
-            <div class="carousel-container cert-carousel" style="position: relative; padding: 0 50px; max-width: 1200px; margin: 0 auto;">
-                <div class="carousel-track" style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;">
-                    <div class="cert-item" style="flex: 0 0 calc(33.333% - 14px); min-width: 250px; scroll-snap-align: start; text-align: center;">
-                         <img src="img/quality-management/quality-certification/img_quality_photo01.jpg" alt="ISO Cert 1" style="width: 100%; height: 350px; object-fit: contain; border: 1px solid #eee; transition: transform 0.3s ease; margin: 0 auto; display: inline-block; background-color: #fff;">
-                    </div>
-                    <div class="cert-item" style="flex: 0 0 calc(33.333% - 14px); min-width: 250px; scroll-snap-align: start; text-align: center;">
-                         <img src="img/quality-management/quality-certification/img_quality_photo02.jpg" alt="ISO Cert 2" style="width: 100%; height: 350px; object-fit: contain; border: 1px solid #eee; transition: transform 0.3s ease; margin: 0 auto; display: inline-block; background-color: #fff;">
-                    </div>
-                     <div class="cert-item" style="flex: 0 0 calc(33.333% - 14px); min-width: 250px; scroll-snap-align: start; text-align: center;">
-                         <img src="img/quality-management/quality-certification/img_quality_photo03.jpg" alt="ISO Cert 3" style="width: 100%; height: 350px; object-fit: contain; border: 1px solid #eee; transition: transform 0.3s ease; margin: 0 auto; display: inline-block; background-color: #fff;">
+            <div class="cert-layout">
+                <div class="cert-block">
+                    <h3 class="cert-block-title" data-i18n="biz_cert_block_title">建造業議會綠色產品認證</h3>
+                    <div class="cert-block-grid">
+                        <div class="cert-list">
+                            <div class="cert-list-head">
+                                <span data-i18n="biz_cert_col_product">產品名稱</span>
+                                <span data-i18n="biz_cert_col_grade">碳等級</span>
+                            </div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item1">C30礦渣微粉 (最高膠凝材料用量450kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item2">C30礦渣微粉 (最高膠凝材料用量470kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item3">C35礦渣微粉 (最高膠凝材料用量470kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item4">C35粉煤灰 (最高膠凝材料用量400kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item5">C40礦渣微粉 (最高膠凝材料用量480kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item6">C40粉煤灰 (最高膠凝材料用量480kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item7">C45礦渣微粉 (最高膠凝材料用量500kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item8">C45礦渣微粉 (最高膠凝材料用量550kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item9">C45粉煤灰 (最高膠凝材料用量500kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item10">C50粉煤灰 (最高膠凝材料用量540kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item11">C60礦渣微粉 (最高膠凝材料用量550kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item12">C60粉煤灰 (最高膠凝材料用量550kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item13">C80礦渣微粉+硅粉 (最高膠凝材料用量600kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item14">C80粉煤灰+硅粉 (最高膠凝材料用量600kg/m³)</span><span data-i18n="biz_grade_platinum">鉑金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item15">C30粉煤灰 (最高膠凝材料用量420kg/m³)</span><span data-i18n="biz_grade_gold">金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item16">C45英泥 (最高膠凝材料用量420kg/m³)</span><span data-i18n="biz_grade_gold">金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item17">C60英泥 (最高膠凝材料用量470kg/m³)</span><span data-i18n="biz_grade_gold">金</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item18">C30英泥 (最高膠凝材料用量450kg/m³)</span><span data-i18n="biz_grade_silver">銀</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item19">C35英泥 (最高膠凝材料用量420kg/m³)</span><span data-i18n="biz_grade_silver">銀</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item20">C40英泥 (最高膠凝材料用量450kg/m³)</span><span data-i18n="biz_grade_silver">銀</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_cert_item21">C45英泥 (最高膠凝材料用量470kg/m³)</span><span data-i18n="biz_grade_silver">銀</span></div>
+                        </div>
+                        <div class="cert-logos">
+                            <img src="img/quality-management/quality-certification/img_quality_photo01.jpg" alt="CIC Green Platinum">
+                            <div class="cert-logos-small">
+                                <img src="img/quality-management/quality-certification/img_quality_photo02.jpg" alt="CIC Green Gold">
+                                <img src="img/quality-management/quality-certification/img_quality_photo03.jpg" alt="CIC Green Silver">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p data-i18n="iso_desc" style="text-align: center; margin-top: 20px; color: #666; font-size: 1rem;">ISO 認證：由第三方機構審核，確保管理體系符合國際標準。</p>
 
-            <!-- Patent -->
-            <div class="patent-container" style="text-align: center; margin-top: 80px;">
-                <img src="img/quality-management/quality-certification/4.png" alt="Patent" style="height: 350px; width: auto; max-width: 100%; object-fit: contain; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; display: inline-block; background-color: #fff;">
-                <p data-i18n="patent_desc" style="margin-top: 25px; color: #666; font-size: 1rem;">專利：由政府授權，保障技術或設計的獨占使用權。</p>
+                <div class="cert-block">
+                    <h3 class="cert-block-title" data-i18n="biz_patent_block_title">批予短期專利證明書</h3>
+                    <div class="patent-block-grid">
+                        <div class="patent-list">
+                            <div class="cert-list-head">
+                                <span data-i18n="biz_patent_col_name">發明名稱</span>
+                                <span data-i18n="biz_patent_col_no">專利編號</span>
+                            </div>
+                            <div class="cert-list-row"><span data-i18n="biz_patent_item1_name">低密度工程用水泥基複合材料及其生產方法</span><span data-i18n="biz_patent_item1_no">HK30127477</span></div>
+                            <div class="cert-list-row"><span data-i18n="biz_patent_item2_name">輕質混凝土</span><span data-i18n="biz_patent_item2_no">HK30112993</span></div>
+                        </div>
+                        <div class="patent-image-wrap">
+                            <img src="img/quality-management/quality-certification/4.png" alt="Patent Certificate">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -326,6 +346,7 @@
                     <ul>
                         <li><a href="business.html#products" style="color: #333;" data-i18n="business_products_title">產品</a></li>
                         <li><a href="business.html#projects" style="color: #333;" data-i18n="section_projects">工程項目</a></li>
+                        <li><a href="business.html#certifications" style="color: #333;" data-i18n="qualifications_title">專業資格</a></li>
                     </ul>
                 </div>
 
@@ -356,7 +377,7 @@
             </div>
             
             <div class="footer-bottom" style="text-align: left; padding-top: 40px; border-top: none;">
-                <p data-i18n="footer_copyright" style="color: #666;">© 2026 鴻輝預製件有限公司 版權所有</p>
+                <p data-i18n="footer_copyright" style="color: #666;">© 2026 永輝混凝土（香港）有限公司 版權所有</p>
             </div>
         </div>
     </footer>
@@ -394,6 +415,95 @@
                 track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
         });
+
+            // Expandable Product Panels with Description Toggle
+            document.querySelectorAll('.product-panel').forEach(panel => {
+                panel.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product');
+                
+                    // Remove active class from all panels
+                    document.querySelectorAll('.product-panel').forEach(p => {
+                        p.classList.remove('active');
+                    });
+                    // Add active class to clicked panel
+                    this.classList.add('active');
+                
+                    // Remove active class from all descriptions
+                    document.querySelectorAll('.product-description-content').forEach(desc => {
+                        desc.classList.remove('active');
+                    });
+                    // Add active class to matching description
+                    const targetDesc = document.querySelector(`.product-description-content[data-description="${productId}"]`);
+                    if (targetDesc) {
+                        targetDesc.classList.add('active');
+                    }
+                });
+            });
+
+        // Projects Carousel Script - shows 5 items at a time
+        (function() {
+            const track = document.querySelector('.projects-carousel-track');
+            const wrapper = document.querySelector('.projects-carousel-wrapper');
+            const prevBtn = document.querySelector('.projects-prev');
+            const nextBtn = document.querySelector('.projects-next');
+            
+            if (!track || !prevBtn || !nextBtn || !wrapper) return;
+
+            const cards = track.querySelectorAll('.project-card');
+            const totalCards = cards.length;
+            const cardsPerView = 5;
+            let currentIndex = 0;
+
+            function getCardShift() {
+                 const firstCard = cards[0];
+                 if (!firstCard) return 0;
+                 const cardWidth = firstCard.getBoundingClientRect().width;
+                 const gap = parseFloat(window.getComputedStyle(track).gap || '0');
+                 return cardWidth + gap;
+            }
+
+            function updateCarousel() {
+                const shiftAmount = getCardShift();
+                const totalShift = shiftAmount * currentIndex;
+                track.style.transform = `translateX(-${totalShift}px)`;
+                
+                // Update button states
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= totalCards - cardsPerView;
+                
+                prevBtn.style.opacity = prevBtn.disabled ? '0.3' : '1';
+                nextBtn.style.opacity = nextBtn.disabled ? '0.3' : '1';
+                prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
+                nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalCards - cardsPerView) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    updateCarousel();
+                }, 100);
+            });
+
+            // Initialize
+            updateCarousel();
+        })();
     </script>
 </body>
 </html>
+

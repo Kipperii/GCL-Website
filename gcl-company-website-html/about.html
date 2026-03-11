@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orientfunds Precast Ltd. | 關於我們</title>
+    <title>Glorious Concrete (H.K.) LTD. | 永輝混凝土（香港）有限公司</title>
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -19,7 +19,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="img/OPL%20logo%20with%20company%20name.png" alt="Orientfunds Precast Ltd. Logo">
+                <img src="img/gloriouslogo.png" alt="Glorious Concrete (H.K.) Ltd. Logo">
             </a>
             
             <div class="header-right">
@@ -62,7 +62,7 @@
         </ul>
     </div>
 
-    <section class="hero" style="background-image: url('img/opl-website-img/Top%20Pic%20%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91.jpg');">
+    <section class="hero" style="background-image: url('img/gcl-website-img/主頁  關於我們.jpg');">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -79,10 +79,10 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <div class="about-hongfai-grid">
                 <div class="about-hongfai-img">
-                    <img src="img/map.png" alt="關於鴻輝 Location Map" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain;">
+                    <img src="img/gcl-website-img/icon_home.png" alt="關於鴻輝 Location Map" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain;">
                 </div>
-                <h2 class="about-hongfai-title" data-i18n="about_hongfai_title">關於鴻輝</h2>
-                <div class="about-hongfai-desc" data-i18n="about_hongfai_desc">
+                <h2 class="about-hongfai-title" data-i18n="about_yongfai_title">關於永輝</h2>
+                <div class="about-hongfai-desc" data-i18n="about_yongfai_desc">
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                 <div class="value-card">
                     <div class="value-card-top">
                          <div class="value-icon">
-                            <img src="img/opl-website-img/Icon 目標.png" alt="Goal">
+                            <img src="img/gcl-website-img/Icon 目標.png" alt="Goal">
                         </div>
                     </div>
                     <div class="value-divider"></div>
@@ -109,7 +109,7 @@
                 <div class="value-card">
                     <div class="value-card-top">
                         <div class="value-icon">
-                            <img src="img/opl-website-img/Icon 使命.png" alt="Mission">
+                            <img src="img/gcl-website-img/Icon 使命.png" alt="Mission">
                         </div>
                     </div>
                     <div class="value-divider"></div>
@@ -122,7 +122,7 @@
                  <div class="value-card">
                     <div class="value-card-top">
                         <div class="value-icon">
-                            <img src="img/opl-website-img/Icon 願景.png" alt="Vision">
+                            <img src="img/gcl-website-img/Icon 願景.png" alt="Vision">
                         </div>
                     </div>
                     <div class="value-divider"></div>
@@ -140,54 +140,213 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <h2 class="section-title milestone-heading" data-i18n="mile_title">里程碑</h2>
             
-            <div class="milestone-wrapper">
-                <div class="milestone-timeline">
-                    <div class="milestone-year-item active" onclick="showMilestone('2024', this)">2024</div>
-                    <div class="milestone-year-item" onclick="showMilestone('2023', this)">2023</div>
-                    <div class="milestone-year-item" onclick="showMilestone('2022', this)">2022</div>
-                    <div class="milestone-year-item" onclick="showMilestone('2019', this)">2019</div>
-                    <div class="milestone-year-item" onclick="showMilestone('2002', this)">2002</div>
-                    <div class="milestone-year-item" onclick="showMilestone('1998', this)">1998</div>
+            <!-- Three bubble display area -->
+            <div class="milestone-bubbles-container">
+                <button class="milestone-arrow milestone-arrow-left" id="arrow-left" aria-label="Previous milestone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="milestone-bubble blur-left" id="bubble-left">
+                    <div class="bubble-year" id="year-left">1979</div>
+                    <div class="bubble-description" id="desc-left" data-i18n="milestone_desc_1979">
+                        永輝混凝土成立，開始在香港混凝土行業運營。
+                    </div>
                 </div>
                 
-                <div class="milestone-content-area">
-                    <div class="milestone-display-header">
-                        <div class="milestone-green-square"></div>
-                        <div class="milestone-display-year" id="current-milestone-year">2024</div>
+                <div class="milestone-bubble active" id="bubble-center">
+                    <div class="bubble-year" id="year-center">2020</div>
+                    <div class="bubble-description" id="desc-center" data-i18n="milestone_desc_2020">
+                        適應市場變化並增加產品創新舉措。
                     </div>
-                    <!-- <div class="value-divider" style="background-color: #4CAF50; width: 60px; height: 4px; margin-bottom: 20px;"></div> -->
-                    <p class="milestone-description" id="current-milestone-desc" data-i18n="milestone_desc_2024">
-                        全預製輕質混凝土牆板獲得專利認證。
-                    </p>
+                </div>
+                
+                <div class="milestone-bubble blur-right" id="bubble-right">
+                    <div class="bubble-year" id="year-right">2021</div>
+                    <div class="bubble-description" id="desc-right" data-i18n="milestone_desc_2021">
+                        推出新產品線並擴大市場占有率。
+                    </div>
+                </div>
+                
+                <button class="milestone-arrow milestone-arrow-right" id="arrow-right" aria-label="Next milestone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Timeline with dots -->
+            <div class="milestone-timeline-wrapper">
+                <div class="timeline-line"></div>
+                <div class="timeline-dots">
+                    <div class="timeline-dot-item" data-year="1979">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">1979</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="1980">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">1980</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="1990">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">1990</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2000">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2000</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2010">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2010</div>
+                    </div>
+                    <div class="timeline-dot-item active" data-year="2020">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2020</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2021">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2021</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2022">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2022</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2023">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2023</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2024">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2024</div>
+                    </div>
+                    <div class="timeline-dot-item" data-year="2025">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2025</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        function showMilestone(year, element) {
-            // Update Active State in Menu
-            document.querySelectorAll('.milestone-year-item').forEach(el => el.classList.remove('active'));
-            if (element) {
-                element.classList.add('active');
-            } else {
-                // If called without element (e.g. initial load), find it
-                const el = Array.from(document.querySelectorAll('.milestone-year-item')).find(e => e.textContent.trim() === year.toString());
-                if (el) el.classList.add('active');
-            }
+        // Milestone years array
+        const milestoneYears = [1979, 1980, 1990, 2000, 2010, 2020, 2021, 2022, 2023, 2024, 2025];
+        let currentIndex = 5; // Start at 2020
 
-            // Update Content
-            document.getElementById('current-milestone-year').innerText = year;
-            const descElement = document.getElementById('current-milestone-desc');
-            const newKey = 'milestone_desc_' + year;
-            descElement.setAttribute('data-i18n', newKey);
+        function updateMilestones() {
+            const currentYear = milestoneYears[currentIndex];
             
-            // Trigger Translation update immediately using the global translations object from language-switch.js
             const currentLang = localStorage.getItem('site_lang') || 'zh';
-            if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][newKey]) {
-                descElement.textContent = translations[currentLang][newKey];
+            const bubbleLeft = document.getElementById('bubble-left');
+            const bubbleCenter = document.getElementById('bubble-center');
+            const bubbleRight = document.getElementById('bubble-right');
+
+            function applyBubbleContent(side, year) {
+                const yearEl = document.getElementById(`year-${side}`);
+                const descEl = document.getElementById(`desc-${side}`);
+                
+                // Fade out content
+                yearEl.style.opacity = '0';
+                descEl.style.opacity = '0';
+                
+                // Update content after fade out
+                setTimeout(() => {
+                    yearEl.textContent = year;
+                    const key = `milestone_desc_${year}`;
+                    descEl.setAttribute('data-i18n', key);
+                    if (typeof translations !== 'undefined' && translations[currentLang]) {
+                        descEl.textContent = translations[currentLang][key] || '';
+                    }
+                    
+                    // Fade in new content
+                    setTimeout(() => {
+                        yearEl.style.opacity = '1';
+                        descEl.style.opacity = '1';
+                    }, 50);
+                }, 150);
             }
+            
+            // Update center bubble
+            applyBubbleContent('center', currentYear);
+
+            // Always show 3 bubbles
+            bubbleLeft.style.display = 'flex';
+            bubbleRight.style.display = 'flex';
+
+            // Reset classes/orders
+            bubbleLeft.className = 'milestone-bubble blur-left';
+            bubbleCenter.className = 'milestone-bubble active';
+            bubbleRight.className = 'milestone-bubble blur-right';
+
+            // Middle years: one blur on each side
+            bubbleLeft.style.order = '2';
+            bubbleCenter.style.order = '3';
+            bubbleRight.style.order = '4';
+
+            if (currentIndex === 0) {
+                // Oldest year: 2 blurred bubbles on the right
+                applyBubbleContent('left', milestoneYears[1]);
+                applyBubbleContent('right', milestoneYears[2]);
+
+                bubbleCenter.style.order = '2';
+                bubbleLeft.style.order = '3';
+                bubbleRight.style.order = '4';
+
+                bubbleLeft.className = 'milestone-bubble blur-right';
+                bubbleRight.className = 'milestone-bubble blur-right';
+            } else if (currentIndex === milestoneYears.length - 1) {
+                // Latest year: 2 blurred bubbles on the left
+                applyBubbleContent('left', milestoneYears[milestoneYears.length - 3]);
+                applyBubbleContent('right', milestoneYears[milestoneYears.length - 2]);
+
+                bubbleLeft.style.order = '2';
+                bubbleRight.style.order = '3';
+                bubbleCenter.style.order = '4';
+
+                bubbleLeft.className = 'milestone-bubble blur-left';
+                bubbleRight.className = 'milestone-bubble blur-left';
+            } else {
+                // Standard case
+                applyBubbleContent('left', milestoneYears[currentIndex - 1]);
+                applyBubbleContent('right', milestoneYears[currentIndex + 1]);
+            }
+            
+            // Update timeline dots
+            document.querySelectorAll('.timeline-dot-item').forEach(item => {
+                item.classList.remove('active');
+                if (parseInt(item.dataset.year) === currentYear) {
+                    item.classList.add('active');
+                }
+            });
         }
+
+        // Add click handlers to timeline dots
+        document.querySelectorAll('.timeline-dot-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const year = parseInt(this.dataset.year);
+                currentIndex = milestoneYears.indexOf(year);
+                updateMilestones();
+            });
+        });
+
+        // Add click handlers to arrow buttons
+        document.getElementById('arrow-left').addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateMilestones();
+            }
+        });
+
+        document.getElementById('arrow-right').addEventListener('click', function() {
+            if (currentIndex < milestoneYears.length - 1) {
+                currentIndex++;
+                updateMilestones();
+            }
+        });
+
+        // Initialize on load
+        updateMilestones();
     </script>
 
     <section id="awards" class="awards-section" style="padding: 80px 0; background-color: #f9f9f9;">
@@ -197,19 +356,28 @@
                 <button class="carousel-btn prev" aria-label="Previous">❮</button>
                 <div class="carousel-track" style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; align-items: center;">
                     <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
-                         <img src="img/opl-website-img/獎項及嘉許1.jpg" alt="Award 1">
+                         <img src="img/gcl-website-img/獎項及嘉許0.jpg" alt="Award 1">
                     </div>
                     <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
-                         <img src="img/opl-website-img/獎項及嘉許2.jpg" alt="Award 2">
+                         <img src="img/gcl-website-img/獎項及嘉許1.jpg" alt="Award 1">
                     </div>
                     <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
-                         <img src="img/opl-website-img/獎項及嘉許3.png" alt="Award 3">
+                         <img src="img/gcl-website-img/獎項及嘉許2.png" alt="Award 2">
                     </div>
                     <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
-                         <img src="img/opl-website-img/獎項及嘉許4.png" alt="Award 4">
+                         <img src="img/gcl-website-img/獎項及嘉許3.png" alt="Award 3">
                     </div>
                     <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
-                         <img src="img/opl-website-img/獎項及嘉許5.png" alt="Award 5">
+                         <img src="img/gcl-website-img/獎項及嘉許4.png" alt="Award 4">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/gcl-website-img/獎項及嘉許5.png" alt="Award 5">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/gcl-website-img/獎項及嘉許6.png" alt="Award 6">
+                    </div>
+                    <div class="award-item" style="flex: 0 0 33%; min-width: 250px; scroll-snap-align: center;">
+                         <img src="img/gcl-website-img/獎項及嘉許7.png" alt="Award 7">
                     </div>
                 </div>
                 <button class="carousel-btn next" aria-label="Next">❯</button>
@@ -222,12 +390,12 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <div class="sister-company-grid">
                 <div class="sister-logo">
-                    <img src="img/gloriouslogo.png" alt="Glorious Concrete (H.K.) Ltd.">
+                    <img src="img/OPL logo with company name.png" alt="Orientfunds Precast LTD.">
                 </div>
                 <div class="sister-content">
                     <h2 class="sister-title" data-i18n="sister_title">姊妹公司</h2>
                     <p class="sister-desc" data-i18n="sister_desc">
-                        永輝混凝土(香港)有限公司與鴻輝預製件有限公司同屬姊妹企業，總部設於香港，專注於混凝土業務。兩家公司秉承專業精神與創新理念，致力提供高品質的混凝土產品及解決方案，服務涵蓋建築、基建及多元工程項目。憑藉香港的地理優勢與完善的物流網絡，企業能高效滿足客戶需求，並持續拓展業務版圖。
+                        永輝混凝土(香港)鴻輝預製件有限公司與永輝混凝土(香港)有限公司同屬姊妹企業，總部設於香港，並在東莞設有廠房，專注於預製混凝土 業務。兩家公司憑藉完善的生產設施與專業技術團隊，提供高品質的預製件產品，廣泛應用於建築及基建工程。透過香港的地理優勢與東莞的生產基地，企業能兼顧效率與品質，靈活滿足不同項目的需求，並持續推動行業的可持續發展。
                     </p>
                     <a href="http://www.glorious.com.hk" target="_blank" class="sister-link">
                         <span data-i18n="website_label">網頁:</span> www.glorious.com.hk
@@ -257,6 +425,7 @@
                     <ul>
                         <li><a href="business.html#products" style="color: #333;" data-i18n="business_products_title">產品</a></li>
                         <li><a href="business.html#projects" style="color: #333;" data-i18n="section_projects">工程項目</a></li>
+                        <li><a href="business.html#certifications" style="color: #333;" data-i18n="qualifications_title">專業資格</a></li>
                     </ul>
                 </div>
 
@@ -287,7 +456,7 @@
             </div>
             
             <div class="footer-bottom" style="text-align: left; padding-top: 40px; border-top: none;">
-                <p data-i18n="footer_copyright" style="color: #666;">© 2026 鴻輝預製件有限公司 版權所有</p>
+                <p data-i18n="footer_copyright" style="color: #666;">© 2026 永輝混凝土（香港）有限公司 版權所有</p>
             </div>
         </div>
     </footer>

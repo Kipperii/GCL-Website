@@ -145,6 +145,11 @@ img {
     border-bottom-color: var(--primary-green);
 }
 
+.nav a.active {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+}
+
 .menu-toggle {
     display: none;
     background: none;
@@ -178,6 +183,11 @@ img {
 .mobile-nav li {
     margin-bottom: 15px;
     text-align: center;
+}
+
+.mobile-nav a.active {
+    color: var(--primary-green);
+    font-weight: 700;
 }
 
 /* Hero Section */
@@ -227,7 +237,8 @@ img {
     /* Position the text specific for the design - left aligned and large */
     text-align: left;
     width: 100%;
-    margin-top: -50px; /* Slight visual adjustment up */
+    margin-top: -150px; /* Move text higher up */
+    padding-left: 80px; /* Move text more to the left */
 }
 
 .hero-content h1 {
@@ -271,7 +282,7 @@ img {
     grid-row: 1;
     color: var(--primary-green);
     font-size: 2.2rem;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     font-weight: 700;
     text-align: left;
 }
@@ -281,7 +292,7 @@ img {
     grid-row: 2;
     font-size: 1.15rem;
     color: var(--text-light);
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     line-height: 1.8;
     text-align: justify;
 }
@@ -300,6 +311,207 @@ img {
 .about-grid .btn-text:hover {
     color: var(--primary-green-dark);
     text-decoration: underline;
+}
+
+/* Homepage Product Accordion */
+.products-expandable {
+    display: flex;
+    gap: 10px;
+    width: min(100%, 820px);
+    min-height: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.product-panel {
+    position: relative;
+    flex: 0 0 110px;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex-basis 0.7s cubic-bezier(0.65, 0.0, 0.35, 1), 
+                flex-grow 0.7s cubic-bezier(0.65, 0.0, 0.35, 1), 
+                transform 0.7s cubic-bezier(0.65, 0.0, 0.35, 1),
+                opacity 0.5s ease,
+                background-color 0.3s ease;
+    background-color: #a8c9aa;
+    transform-origin: center;
+    will-change: flex-basis, flex-grow, transform;
+}
+
+.product-panel.active {
+    flex: 1 1 auto;
+    background-color: var(--primary-green);
+    transform: scale(1.01);
+}
+
+.product-panel-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s cubic-bezier(0.65, 0.0, 0.35, 1);
+}
+
+.product-panel.active .product-panel-content {
+    transform: translateX(0);
+}
+
+.product-image {
+    width: 100%;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s cubic-bezier(0.65, 0.0, 0.35, 1), 
+                opacity 0.5s ease;
+}
+
+.product-panel:not(.active) .product-image img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.product-panel.active .product-image img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.product-panel:hover .product-image img {
+    transform: scale(1.03);
+}
+
+.product-panel-header {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background: rgba(46, 125, 50, 0.55);
+    transition: background 0.7s cubic-bezier(0.65, 0.0, 0.35, 1), 
+                align-items 0.7s cubic-bezier(0.65, 0.0, 0.35, 1), 
+                justify-content 0.7s cubic-bezier(0.65, 0.0, 0.35, 1),
+                padding 0.7s cubic-bezier(0.65, 0.0, 0.35, 1);
+}
+
+.product-panel-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: none;
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.7s cubic-bezier(0.65, 0.0, 0.35, 1);
+}
+
+.panel-icon {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--primary-green-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    transition: all 0.7s cubic-bezier(0.65, 0.0, 0.35, 1);
+}
+
+.product-panel.active .panel-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-panel.active .product-panel-header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 55%);
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 18px 18px;
+}
+
+.product-panel.active .product-panel-header h3 {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.product-panel.active .panel-icon {
+    left: auto;
+    right: 14px;
+    bottom: 14px;
+    transform: none;
+}
+
+/* Fix collapsed product bar titles in English */
+html[lang="en"] .product-panel:not(.active) .product-panel-header h3 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    letter-spacing: 0;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+}
+
+    /* Product Description Section */
+    .product-description-container {
+        position: relative;
+        min-height: 300px;
+        width: min(100%, 820px);
+        margin: 0 auto;
+    }
+
+    .product-description-content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
+    }
+
+    .product-description-content.active {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        transform: translateY(0);
+    }
+
+@media (max-width: 768px) {
+    .products-expandable {
+        min-height: 260px;
+    }
+
+    .product-panel {
+        flex: 0 0 62px;
+    }
+
+    .product-panel-header h3,
+    .product-panel.active .product-panel-header h3 {
+        font-size: 1.4rem;
+    }
 }
 
 /* Projects Section */
@@ -364,31 +576,77 @@ img {
 /* Stats Section */
 .stats {
     padding: 100px 0;
-    background-color: var(--white);
+    background-color: var(--primary-green);
 }
 
-.stats-grid {
+.stats-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.stats-left {
+    padding-right: 20px;
+}
+
+.stats-left .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+    color: var(--white);
+}
+
+.stats-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--white);
+}
+
+.stats-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: -2px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    font-size: 0;
 }
 
 .stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    margin: -3px;
+    background-color: #f9f9f9;
+    border: 2px solid var(--primary-green);
+    border-radius: 0;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
 }
 
 .stat-number {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--primary-green);
     line-height: 1;
-    margin-bottom: 15px;
-    font-family: 'Arial', sans-serif; /* Clean number font */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
 }
 
 .stat-label {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--text-dark);
     font-weight: 600;
 }
@@ -409,7 +667,7 @@ img {
 
 .cta p {
     font-size: 1.3rem;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     opacity: 0.95;
 }
 
@@ -573,9 +831,17 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .stats-grid {
+    .stats-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .stats-left {
+        padding-right: 0;
+    }
+
+    .stats-left .section-title {
+        text-align: center;
     }
     
     .footer-grid {
@@ -623,6 +889,24 @@ img {
     margin: 0 5px;
 }
 
+/* Large green divider under sections */
+.section-divider {
+    position: relative;
+}
+
+.section-divider::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-green);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 /* About Intro */
 .about-intro-grid {
     display: grid;
@@ -637,10 +921,43 @@ img {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+.about-hongfai-section {
+    position: relative;
+}
+
+.about-hongfai-section::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 /* Core Values */
 .core-values-section {
     background-color: var(--light-grey);
     padding: 60px 0;
+    position: relative;
+}
+
+.core-values-section::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 .core-values-grid {
     display: grid;
@@ -718,6 +1035,21 @@ img {
 /* Milestone Timeline */
 .milestone-section {
     padding: 80px 0;
+    position: relative;
+}
+
+.milestone-section::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 .timeline-container {
     position: relative;
@@ -791,6 +1123,21 @@ img {
     padding: 60px 0;
     text-align: center;
     border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+.awards-section::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .awards-grid {
@@ -982,6 +1329,17 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.projects-carousel-track .card-image {
+    height: 300px;
+}
+
+.projects-carousel-track .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-card .card-content {
@@ -1409,6 +1767,94 @@ img {
     position: relative;
 }
 
+.cert-layout {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.cert-block {
+    border-top: 2px solid #a8d5bd;
+    padding: 24px 0;
+}
+
+.cert-block-title {
+    color: var(--primary-green);
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cert-block-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.cert-list-head,
+.cert-list-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 16px;
+    align-items: start;
+}
+
+.cert-list-head span:first-child,
+.cert-list-row span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.cert-list-head span:last-child,
+.cert-list-row span:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cert-list-head {
+    color: #1d1d1d;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cert-list-row {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    padding: 2px 0;
+}
+
+.cert-logos img,
+.patent-image-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+}
+
+.cert-logos-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.patent-block-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .cert-block-grid,
+    .patent-block-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Precast Quality Management Section */
 .pqm-section {
     padding: 60px 0;
@@ -1525,13 +1971,15 @@ img {
 /* Milestone Interactive Section */
 .milestone-section {
     position: relative;
-    background-image: url('img/opl-website-img/%E9%87%8C%E7%A8%8B%E7%A2%91.jpg');
+    background-color: #efede6;
     background-size: cover;
     background-position: center;
-    min-height: 600px;
+    min-height: 700px;
     color: white;
     display: flex;
-    align-items: center; /* Vertical center */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 0;
 }
 
 .milestone-bg-overlay {
@@ -1540,8 +1988,6 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradient from dark (for text) to transparent/white (for brightness) */
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.9) 100%);
     z-index: 1;
 }
 
@@ -1549,134 +1995,304 @@ img {
     position: relative;
     z-index: 2;
     width: 100%;
-}
-
-.milestone-wrapper {
-    display: flex;
-    gap: 80px;
-    align-items: flex-start;
-    margin-top: 40px;
-}
-
-.milestone-timeline {
     display: flex;
     flex-direction: column;
-    border-left: 2px solid rgba(255,255,255,0.2);
-    width: 220px; /* Fixed width to prevent vibration/jumping */
-    flex-shrink: 0;
 }
 
-.milestone-year-item {
-    font-size: 1.8rem;
+.milestone-heading {
+    color: var(--primary-green); 
+    font-size: 2.5rem; 
+    margin-bottom: 60px; 
     font-weight: 700;
-    color: rgba(255,255,255,0.4);
-    padding: 15px 30px;
-    cursor: pointer;
+    margin-left: 0;
+    text-align: center;
+}
+
+/* Chat Bubbles Container */
+.milestone-bubbles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 35px;
+    min-height: 300px;
     position: relative;
-    /* transition: all 0.3s ease; REMOVED VIBRATION */
-    font-family: 'Segoe UI', sans-serif; /* Clean font for numbers */
 }
 
-.milestone-year-item::before {
-    content: '';
-    position: absolute;
-    left: -2px; /* Overlap border */
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background-color: #4CAF50;
-    opacity: 0;
-    /* transition: opacity 0.3s ease; REMOVED VIBRATION */
-}
-
-.milestone-year-item:hover {
-    color: rgba(255,255,255,0.8);
-}
-
-.milestone-year-item.active {
-    color: #ffffff;
-    font-size: 2.5rem; /* Larger active year */
-    padding-left: 20px; 
-    padding-right: 20px;
-}
-
-.milestone-year-item.active::before {
-    opacity: 0; /* Remove the side line when box is active */
-}
-
-.milestone-content-area {
-    flex: 1;
-    padding-top: 10px;
-    padding-left: 140px; /* Increased padding to move text right */
-}
-
-.milestone-display-header {
+.milestone-arrow {
+    background: rgba(46, 125, 50, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.milestone-green-square {
-    width: 32px;
-    height: 32px;
-    background-color: var(--primary-green);
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     flex-shrink: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.milestone-display-year {
-    font-size: 3.5rem;
+.milestone-arrow-left {
+    order: 1;
+}
+
+.milestone-arrow-right {
+    order: 5;
+}
+
+.milestone-arrow:hover {
+    background: var(--primary-green);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.milestone-arrow:active {
+    transform: scale(0.95);
+}
+
+.milestone-arrow svg {
+    display: block;
+}
+
+.milestone-bubble {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat bubble pointer */
+.milestone-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, 0.95);
+}
+
+.milestone-bubble.active {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    filter: none;
+}
+
+.milestone-bubble.blur-left,
+.milestone-bubble.blur-right {
+    filter: blur(0.5px);
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+.milestone-bubble.blur-left {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.milestone-bubble.blur-right {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.bubble-year {
+    font-size: 2rem;
     font-weight: 800;
-    color: #4CAF50; /* Keep green or make white with shadow like reference? Ref allows white with heavy shadow */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Strong shadow */
-    margin-bottom: 0; /* Updated to 0 to align with square */
-    line-height: 1;
-    display: none; /* Hide if duplicated in sidebar, but can be nice to show again */
+    color: var(--primary-green);
+    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
-/* We design it so year is highlighted on left, text on right. */
-/* But users prompt image suggests a specific design involving text display. */
-/* I will keep the big year in the content area as well for emphasis. */
-.milestone-display-year {
-    display: block; 
-    color: #ffffff; /* Override to white based on the reference image 'bright' content */
-}
-
-.milestone-description {
-    font-size: 1.4rem;
+.bubble-description {
+    font-size: 1.1rem;
     line-height: 1.6;
-    color: #ffffff;
-    max-width: 700px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-    /* Align with the Year text (Square 32px + Gap 15px = 47px) */
-    margin-left: 47px; 
+    color: var(--text-dark);
+    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
+/* Timeline */
+.milestone-timeline-wrapper {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 8px;
+}
 
-/* Aligned Heading Logic */
-.milestone-heading {
-    color: white; 
-    font-size: 2.5rem; 
-    margin-bottom: 40px; 
+.timeline-line {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.timeline-dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-dot-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-top: 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(49, 47, 47, 0.5);
+    border: 2px solid rgba(156, 155, 155, 0.7);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-dot-item:hover .timeline-dot {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.timeline-dot-item.active .timeline-dot {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.8);
+}
+
+.timeline-year {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.timeline-dot-item.active .timeline-year {
+    color: var(--primary-green);
+    font-size: 1.1rem;
     font-weight: 700;
-    /* 
-       Calculation for alignment with content:
-       Timeline Width (180px) + Wrapper Gap (80px) + Content Padding (180px) = 440px 
-    */
-    margin-left: 440px;
-    text-align: left;
 }
 
-/* Unified Mobile Responsive Styles */
-@media (max-width: 991px) { /* Tablet and smaller desktop */
-    .milestone-heading {
-        margin-left: 100px; /* Reduce margin on tablet */
+@media (max-width: 991px) {
+    .milestone-section {
+        min-height: auto;
+        padding: 60px 0;
     }
-    .milestone-content-area {
-        padding-left: 50px; /* Reduce padding on tablet */
+    
+    .milestone-heading {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .milestone-bubbles-container {
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+    
+    .milestone-arrow {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .milestone-arrow svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .milestone-bubble {
+        width: 250px;
+        padding: 25px;
+        min-height: 180px;
+    }
+    
+    .bubble-year {
+        font-size: 1.6rem;
+    }
+    
+    .bubble-description {
+        font-size: 1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .milestone-heading {
+        font-size: 1.8rem;
+    }
+    
+    .milestone-bubbles-container {
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .milestone-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .milestone-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .milestone-bubble {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .milestone-bubble.blur-left,
+    .milestone-bubble.blur-right {
+        display: none;
+    }
+    
+    .milestone-bubble.active {
+        transform: scale(1);
+    }
+    
+    .timeline-dots {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .timeline-line {
+        left: 10px;
+        right: 10px;
+    }
+    
+    .timeline-year {
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (max-width: 768px) {
     .milestone-section {

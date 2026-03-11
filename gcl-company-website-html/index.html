@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orientfunds Precast Ltd. | 鴻輝預製件有限公司</title>
+    <title>Glorious Concrete (H.K.) LTD. | 永輝混凝土（香港）有限公司</title>
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -19,7 +19,7 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="img/OPL%20logo%20with%20company%20name.png" alt="Orientfunds Precast Ltd. Logo">
+                    <img src="img/gloriouslogo.png" alt="Glorious Concrete (H.K.) Ltd.">
             </a>
             
             <div class="header-right">
@@ -63,7 +63,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('img/opl-website-img/Top%20Pic%20主頁.jpg');">
+    <section class="hero" style="background-image: url('img/gcl-website-img/主頁.jpg');">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -76,145 +76,63 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="img/opl-website-img/icon_home.png" alt="About Orientfunds">
+                    <img src="img/gcl-website-img/icon_home.png" alt="About Orientfunds">
                 </div>
                 <h2 class="about-title" data-i18n="index_about_title">關於鴻輝</h2>
                 <p class="about-desc" data-i18n="index_about_desc">鴻輝是一家專注於預製件的公司，秉承「以心建家」的精神，勇於克服困難，不斷開拓新路。我們堅持以專業與創新為核心，致力為客戶提供優質可靠的建築解決方案。</p>
-                <a href="about.html" class="btn-text" data-i18n="btn_learn_more">了解更多 &rarr;</a>
+                <a href="about.html" class="btn-text" data-i18n="btn_learn_more" style="background-color: var(--primary-green); color: white; padding: 12px 30px; border-radius: 5px; display: inline-block; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease;">了解更多 &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- Engineering Projects Section -->
-    <section id="projects" class="projects-section" style="padding: 60px 0; background-color: #f9f9f9;">
+    <!-- Product Section -->
+    <section id="products" class="products-section" style="padding: 80px 0; background-color: #f9f9f9;">
         <div class="container">
-            <h2 class="section-title" data-i18n="eng_projects">已完成工程項目</h2>
+            <h2 class="section-title" data-i18n="business_products_title">產品</h2>
             
-            <div class="carousel-container">
-                <button class="carousel-btn prev" aria-label="Previous">❮</button>
-                <div class="project-carousel carousel-track">
-                    <!-- 1. Kai Tak Cullinan Harbour -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 啟德 天璽海.png" alt="啟德 天璽 • 海">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_keitak">啟德</h3>
-                            <p data-i18n="proj_cullinan_harbour">天璽 • 海</p>
-                        </div>
+            <div class="products-expandable">
+                <!-- Product 1: Pre-mixed Mortar (Active by default) -->
+                <div class="product-panel active" data-product="mortar1">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_mortar1" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預拌砂漿產品</h3>
+                        <span class="panel-icon">+</span>
                     </div>
-                    <!-- 2. Tin Shui Wai Yoho West -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 Yoho West.png" alt="天水圍 Yoho West">
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預拌混凝土產品.jpg" alt="預拌砂漿產品">
                         </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tinshuiwai">天水圍</h3>
-                            <p data-i18n="proj_yoho_west">Yoho West</p>
-                        </div>
+
                     </div>
-                    <!-- 3. Sai Sha Sierra Sea -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 Sierra Sea.png" alt="西沙 Sierra Sea">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_saisha">西沙</h3>
-                            <p data-i18n="proj_sierra_sea">Sierra Sea</p>
-                        </div>
+                </div>
+
+                <!-- Product 2: Pre-mixed Mortar (Collapsed) -->
+                <div class="product-panel" data-product="mortar2">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_mortar2" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預拌砂漿產品</h3>
+                        <span class="panel-icon">+</span>
                     </div>
-                    <!-- 4. Kai Tak Cullinan Sky -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 啟德 天璽天.png" alt="啟德 天璽 • 天">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_keitak">啟德</h3>
-                            <p data-i18n="proj_cullinan_sky">天璽 • 天</p>
-                        </div>
-                    </div>
-                    <!-- 5. Tuen Mun NOVOLAND -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 NOVOLAND.png" alt="屯門 NOVOLAND">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tuenmun">屯門</h3>
-                            <p data-i18n="proj_novoland">NOVOLAND</p>
-                        </div>
-                    </div>
-                    <!-- 6. Tsuen Wan 1 Sha Tsui Road -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 沙咀道1號.png" alt="荃灣 沙咀道1號">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tsuenwan">荃灣</h3>
-                            <p data-i18n="proj_1_sha_tsui_rd">沙咀道1號</p>
-                        </div>
-                    </div>
-                    <!-- 7. Pak Shek Kok University Hill -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 University Hill.png" alt="白石角 University Hill">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_pakshekkok">白石角</h3>
-                            <p data-i18n="proj_university_hill">University Hill</p>
-                        </div>
-                    </div>
-                    <!-- 8. Yuen Long The YOHO Hub Phase 2 -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 The yoho hub 2期.png" alt="元朗 The YOHO Hub 2期">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_yuenlong">元朗</h3>
-                            <p data-i18n="proj_yoho_hub_2">The YOHO Hub 2期</p>
-                        </div>
-                    </div>
-                    <!-- 9. Shatin St Michel -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 瓏珀山.png" alt="沙田 瓏珀山">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_shatin">沙田</h3>
-                            <p data-i18n="proj_shatin_name">瓏珀山</p>
-                        </div>
-                    </div>
-                    <!-- 10. Tai Kok Tsui Sablier -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 傲寓.png" alt="大角咀 傲寓">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_taikoktsui">大角咀</h3>
-                            <p data-i18n="proj_taikoktsui_name">傲寓</p>
-                        </div>
-                    </div>
-                    <!-- 11. Tsing Yi The Grand Marine -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 明翹匯.png" alt="青衣 明翹匯">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_tsingyi">青衣</h3>
-                            <p data-i18n="proj_tsingyi_name">明翹匯</p>
-                        </div>
-                    </div>
-                    <!-- 12. Island South La Marina -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="img/opl-website-img/工程項目 揚海.png" alt="港島南 揚海">
-                        </div>
-                        <div class="card-content">
-                            <h3 data-i18n="proj_southisland">港島南</h3>
-                            <p data-i18n="proj_southisland_name">揚海</p>
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預拌砂漿產品.png" alt="預拌砂漿產品">
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next">❯</button>
+
+                <!-- Product 3: Pre-packaged Gypsum-based (Collapsed) -->
+                <div class="product-panel" data-product="gypsum">
+                    <div class="product-panel-header">
+                        <h3 data-i18n="biz_panel_gypsum" style="flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; padding-right: 10px;">預包裝石膏基產品</h3>
+                        <span class="panel-icon">+</span>
+                    </div>
+                    <div class="product-panel-content">
+                        <div class="product-image">
+                            <img src="img/gcl-website-img/產品_預包裝石膏基產品.jpg" alt="預包裝石膏基產品">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="business.html" class="btn-text" data-i18n="btn_more" style="background-color: var(--primary-green); color: white; padding: 12px 30px; border-radius: 5px; display: inline-block; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease;">了解更多 →</a>
             </div>
         </div>
     </section>
@@ -222,30 +140,34 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
-            <h2 class="section-title" data-i18n="section_strength">公司實力</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">25+</div>
-                    <div class="stat-label" data-i18n="stat_years">年專業經驗</div>
+            <div class="stats-wrapper">
+                <div class="stats-left">
+                    <h2 class="section-title" data-i18n="strength_title">我們具備完整的專業能力，<br>能夠實現他人認為<br>不可能的工程。</h2>
+                    <p class="stats-description" data-i18n="index_strength_desc_1">當其他人追逐潮流之際，我們專注於重新定義建築的可能性。從地基工程、混凝土配方到環保材料與施工技術，我們皆具備深厚專業能力。真正令我們與眾不同的，是我們不只停留在水泥與鋼筋，而是以工程師的思維突破界限。<br></p>
+                    
+                    <p class="stats-description" data-i18n="index_strength_desc_2">在綠色建築與智慧城市的時代，我們不僅適應，更主動塑造未來。結合建築專業與環保創新，融合創意解難與高效執行，從工地到社區，我們交付能經得起時間考驗的混凝土方案。</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label" data-i18n="stat_projects">成功項目</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">56,660+</div>
-                    <div class="stat-label" data-i18n="stat_factory">平方米廠房</div>
+                <div class="stats-right">
+                    <div class="stats-grid-2x2">
+                        <div class="stat-item" style="background-color: var(--primary-green-dark); color: white;">
+                            <div class="stat-number" style="color: white;">45+</div>
+                            <div class="stat-label" data-i18n="stat_years" style="color: white;">年專業經驗</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label" data-i18n="stat_projects">成功項目</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label" data-i18n="serve_clients">服務客戶</div>
+                        </div>
+                        <div class="stat-item" style="background-color: var(--primary-green-dark); color: white;">
+                            <div class="stat-number" style="color: white;">3,000+</div>
+                            <div class="stat-label" data-i18n="production_volume" style="color: white;">生產量(立方米)</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2 data-i18n="cta_title">公司實力</h2>
-            <p data-i18n="cta_desc">了解更多關於我們的服務和項目</p>
-            <a href="contact.html" class="btn btn-white" data-i18n="btn_contact_us">聯絡我們</a>
         </div>
     </section>
 
@@ -269,6 +191,7 @@
                     <ul>
                         <li><a href="business.html#products" style="color: #333;" data-i18n="business_products_title">產品</a></li>
                         <li><a href="business.html#projects" style="color: #333;" data-i18n="section_projects">工程項目</a></li>
+                        <li><a href="business.html#certifications" style="color: #333;" data-i18n="qualifications_title">專業資格</a></li>
                     </ul>
                 </div>
 
@@ -299,7 +222,7 @@
             </div>
             
             <div class="footer-bottom" style="text-align: left; padding-top: 40px; border-top: none;">
-                <p data-i18n="footer_copyright" style="color: #666;">© 2026 鴻輝預製件有限公司 版權所有</p>
+                <p data-i18n="footer_copyright" style="color: #666;">© 2026 永輝混凝土（香港）有限公司 版權所有</p>
             </div>
         </div>
     </footer>
@@ -335,6 +258,19 @@
                 track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
         });
+
+        // Expandable Product Panels
+        document.querySelectorAll('.product-panel').forEach(panel => {
+            panel.addEventListener('click', function() {
+                // Remove active class from all panels
+                document.querySelectorAll('.product-panel').forEach(p => {
+                    p.classList.remove('active');
+                });
+                // Add active class to clicked panel
+                this.classList.add('active');
+            });
+        });
     </script>
 </body>
 </html>
+
